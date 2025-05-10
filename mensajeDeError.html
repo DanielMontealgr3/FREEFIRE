@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="tarjetaAviso">
+        <div class="aviso" id="aviso">
+            <div class="error">
+                <p id="error"></p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function mensaje(mensaje){
+
+            const error = document.getElementById("error")
+            const aviso = document.getElementById("aviso")
+            error.innerHTML = mensaje
+            aviso.classList.add("animacion")
+        }
+
+        
+    </script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .tarjetaAviso{
+           width: 100%;
+        }
+        .aviso{
+            width: clamp(320px, 80%, 30%);
+            height: 80px;
+            background-color: #eeb72b;
+            position: absolute;
+            z-index: 1000;
+            top: 5%;
+            left: -100%;
+
+        }
+
+        .animacion{
+            animation: salir 2s ease forwards;
+            left: 0%;
+        }
+        @keyframes salir {
+            from{
+                transform: translateX(-110%);
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        #error{
+           font-size: 20px;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+           margin-left: 10%;
+           width: 80%;
+        }
+    </style>
+</body>
+</html>

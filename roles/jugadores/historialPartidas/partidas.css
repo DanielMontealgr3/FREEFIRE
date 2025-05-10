@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+a{
+    text-decoration: none;
+}
+
+@media (width >= 320px) {
+    body{
+        background-color: #101820;
+
+    }
+
+    .titulo{
+        
+        background: linear-gradient(to right, #f97316, #b91c1c);
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+
+    .comienzo{
+        margin-right: 10px;
+    }
+
+    .opcionesDiv{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .tituloPartida{
+
+        font-size: x-large;
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    .opciones{
+        display: flex;
+        color: white;
+        text-decoration: none;
+    }
+
+    .imgIconPersona,.imgIcon,.imgControl{
+        width: 30px;
+        height: 30px;
+        object-fit: scale-down;
+    }
+
+    .nombreOpciones{
+        display: flex;
+        font-size: 10px;
+        align-items: center;
+        background-color: #f97316;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .registro{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        background-color: #1b2733;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    
+    .colum1{
+        display: flex;
+        color: white;
+        
+    }
+
+    hr{
+        color: green;
+        border: 1px solid  #f97316;
+    }
+
+    .mapa{
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+    }
+   
+    .ganador{
+        color: rgb(51, 250, 24);
+    }
+    .sala{
+        color: white;
+    }
+
+    .colum3{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .jugadores{
+        color: white;
+        font-weight: 600;
+    }
+    .username{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #5b6077;
+    }
+}
+
+@media (width >= 551px) {
+    .registro{
+        display: flex;
+        width: 100%;
+        height: 98px;
+        background-color: #1b2733;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    
+    .colum1{
+        flex: 1;
+        display: flex;
+        color: white;
+        flex-direction: row;
+    }
+    .colum2{
+        width: 30%;
+    }
+    .colum3{
+        display: flex;
+        width: 40%;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

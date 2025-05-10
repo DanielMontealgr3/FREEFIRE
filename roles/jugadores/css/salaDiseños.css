@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    transition: 1s;
+}
+
+body {
+    background-image: url(../../../assets/fondos/fondoDePartida.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateX(100);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.padre {
+    width: 100%;
+    height: 100dvh;
+}
+
+.botonSalir {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    padding-top: 30px;
+    align-items: center;
+}
+
+.salir {
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.477);
+    height: 50px;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.contador {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    padding-right: 100px;
+}
+
+.logMovimientos {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.personas {
+    width: 100%;
+    height: 50dvh;
+    display: grid;
+    grid-template-columns: 544px 148px 173px auto;
+    grid-template-rows: auto;
+}
+
+.username {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    width: 150px;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nombreJugador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.divImgPersona {
+    display: flex;
+    width: clamp(100px, 30%, 100%);
+    height: clamp(100px, 152px, 144px);
+    overflow: hidden;
+    justify-content: center;
+    border: 5px solid #eeb72b;
+}
+
+.imgPersona {
+    width: 102px;
+    height: 304px;
+    object-fit: cover;
+}
+
+progress {
+    width: 150px;
+    height: 13px;
+    border-radius: 11px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+::-webkit-progress-bar {
+    background-color: #fc0606;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #00ff08, #88ff00);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+progress#health {
+    width: 100%;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress#health::-webkit-progress-bar {
+    background-color: #ff0000;
+    /* Rojo para el fondo (parte no completada) */
+    border-radius: 5px;
+}
+
+.atacar {
+    width: 100px;
+    height: 29px;
+    font-size: large;
+    font-weight: 600;
+    background: #eeb72b;
+    border: none;
+    margin: 10px;
+}
+
+.menuArmas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedroDeArmasMain {
+    display: flex;
+    width: 500px;
+    column-gap: 4%;
+}
+
+.containerArma {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-image: url('../armas/fondoArma.png');
+    background-size: cover;
+    color: white;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.armas {
+    width: 48%;
+}
+
+.imgArma {
+    width: 200px;
+    height: 60px;
+}
+
+.vida {
+    width: 500px;
+    height: 50px;
+    background: #0abb03;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+    transition: 1s;
+}
+
+.contrincante {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.menuAtacar {
+    width: 80%;
+    display: flex;
+    height: 80dvh;
+    background: rgba(0, 0, 0, 0.753);
+    position: absolute;
+    margin: 5% 0% 0 10%;
+    top: 0;
+    flex-direction: row;
+    display: none;
+}
+
+.nombreUsuario {
+    color: white;
+    font-size: 3rem;
+    margin-top: 30px;
+}
+
+.containerAtacar {
+    padding: 5% 5% 0px 5%;
+    width: 250px;
+    height: 100%;
+}
+
+.personaAtacada {
+    display: flex;
+    width: 100%;
+    height: clamp(100px, 13vw, 300px);
+    overflow: hidden;
+    justify-content: center;
+    border: 5px solid #eeb72b;
+}
+
+.personaAtacagaImg {
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.sectionArmasUsuario {
+    display: flex;
+    padding: 80px;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow-y: scroll;
+}
+
+.sectionArmasUsuario::-webkit-scrollbar {
+    background: none;
+}
+
+.scrollArmas {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.armasAtacar {
+    background-image: url('../armas/fondoArma.png');
+    width: 265px;
+    height: 80px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.atacarHacerDaño {
+    width: 100px;
+    height: 29px;
+    font-size: large;
+    font-weight: 600;
+    background: #eeb72b;
+    border: none;
+    margin: 10px;
+}
+
+.cerrar {
+    width: 41px;
+    background-color: rgb(253 27 27);
+    height: 26px;
+    color: white;
+    font-weight: 900;
+    border-radius: 3px;
+    border: none;
+    margin-top: 30px;
+}
+
+.cerrar:hover {
+    background-color: #eeb72b;
+    transform: scale(1.1);
+}
+
+@media (width>=320px) AND (width <=768px) {
+    .logMovimientos {
+        all: unset;
+    }
+    .padre {
+        overflow-x: auto;
+    }
+    .personas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+    .menuArmas {
+        margin-top: 100px;
+        align-items: flex-start;
+    }
+    .containerArma {
+        display: none;
+    }
+    .vida {
+        margin-top: 30px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .menuAtacar {
+        width: 90%;
+        display: flex;
+        height: 80dvh;
+        background: rgba(0, 0, 0, 0.753);
+        position: absolute;
+        margin: 5% 0% 0 5%;
+        top: 0;
+        flex-direction: row;
+        display: none;
+        flex-direction: column;
+    }
+    .contrincante {
+        margin: unset;
+        width: auto;
+    }
+    .nombreUsuario {
+        margin: unset;
+    }
+    .sectionArmasUsuario {
+        flex: unset;
+        padding: unset;
+    }
+    .armasAtacar {
+        background-image: url('../armas/fondoArma.png');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (width>=775px) AND (width <=1024px) {
+    .contrincante {
+        margin-left: unset;
+    }
+    .sectionArmasUsuario {
+        padding: unset;
+    }
+}
+
+
+/* 
+
+
+
+
+
+*/
+
+#ventanaPartesCuerpo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.sectionPartesCuerpo {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloContainer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.partesCuerpoBotonesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 11px;
+}
+
+.parteCuerpoButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: #edbf49;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.partesImg {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.parteCuerpoButton:hover .partesImg {
+    filter: invert(1);
+}
+
+.parteCuerpoButton:hover {
+    background-color: #f5af00;
+}
+
+.icono-ataque {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.nombre-zona {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+}

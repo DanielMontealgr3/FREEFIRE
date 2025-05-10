@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+body {
+  background-image: url(../../../assets/fondos/lobby.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+@keyframes aparecer {
+  from{
+      opacity: 0;
+      transform: translateY(150px);
+  }to{
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.padre {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 40px 70px repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 6 / 3;
+  height: 100dvh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+.salas1,
+.salas2 {
+  width: clamp(200px, 80vw, 250px);
+  height: 90px;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  background: #eeb72b;
+  box-shadow: 0px 4px 2px black;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.salas2 {
+  background: black;
+  color: white;
+  box-shadow: 0px 4px 2px #eeb72b;
+}
+.div2 {
+  grid-area: 1 / 3 / 2 / 6;
+  display: flex;
+  justify-content: flex-end;
+}
+.div3 {
+  grid-area: 2 / 3 / 3 / 6;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.7rem;
+  margin-top: 50px;
+}
+.div4 {
+  grid-area: 3 / 3 / 6 / 6;
+}
+
+.salaDisponible {
+  color: white;
+  width: 90%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.49);
+  height: 80px;
+  padding-right: 80px;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  margin-top: 100px;
+}
+
+.unirse {
+  width: 100px;
+  height: 30px;
+  background-color: #eeb72b;
+  color: black;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.unirse:hover {
+  background-color: black;
+  color: white;
+}
+
+.botonSalir {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+  padding-top: 30px;
+  align-items: center;
+}
+.salir {
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.477);
+  height: 50px;
+  padding: 10px;
+  border-radius: 100px;
+}
+@media (width >= 320px) {
+  .padre {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div1 {
+    display: none;
+  }
+  .div2 {
+    grid-area: 1 / 3 / 2 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .div3 {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .botonSalir {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: unset;
+  }
+
+  .salaDisponible{
+    color: white;
+    width: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.49);
+    height: 77px;
+    padding-right: unset;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    /* margin-bottom: 70px; */
+    margin-top: 100px;
+    opacity: 0;
+    animation: aparecer 0.8s ease forwards;
+    animation-delay: 0.2s
+  }
+  .infoIdSala,.jugadoresActuales{
+    font-size: clamp(10px,0.7rem, 30px);
+    display: flex;
+  }
+
+  .jugadoresActuales{
+    flex-direction: column;
+  }
+
+  .unirse{
+    width: 69px;
+    height: 24px;
+    background-color: #eeb72b;
+    color: black;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+
+@media (width >= 425px) {
+
+    .infoIdSala,.jugadoresActuales{
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(0.2em,0.9rem, 1rem);
+    }
+
+
+}
+
+
+@media (width >= 885px) {
+    .padre {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 40px 70px repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+      }
+      
+      .div1 {
+        grid-area: 1 / 1 / 6 / 3;
+        height: 100dvh;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+      }
+      
+      .salas1,
+      .salas2 {
+        width: clamp(200px, 80vw, 250px);
+        height: 90px;
+        display: flex;
+        text-decoration: none;
+        color: black;
+        align-items: center;
+        background: #eeb72b;
+        box-shadow: 0px 4px 2px black;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+      
+      .salas2 {
+        background: black;
+        color: white;
+        box-shadow: 0px 4px 2px #eeb72b;
+      }
+      .div2 {
+        grid-area: 1 / 3 / 2 / 6;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .div3 {
+        grid-area: 2 / 3 / 3 / 6;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.7rem;
+        margin-top: 50px;
+      }
+      .div4 {
+        grid-area: 3 / 3 / 6 / 6;
+      }
+      
+      .salaDisponible {
+        color: white;
+        width: 90%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.49);
+        height: 80px;
+        padding-right: 80px;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        margin-bottom: 70px;
+        margin-top: 100px;
+      }
+      
+      .unirse {
+        width: 100px;
+        height: 30px;
+        background-color: #eeb72b;
+        color: black;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      
+      .unirse:hover {
+        background-color: black;
+        color: white;
+      }
+      
+      .botonSalir {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 100px;
+        padding-top: 30px;
+        align-items: center;
+      }
+      .salir {
+        width: 50px;
+        background-color: rgba(0, 0, 0, 0.477);
+        height: 50px;
+        padding: 10px;
+        border-radius: 100px;
+      }
+}

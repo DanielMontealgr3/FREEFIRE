@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('../../assets/fondos/background_admi.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-left: 260px
+}
+
+
+/*CONTENIDO DEL MENU*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.menu_opcion {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.menu_opcion ul {
+    background-color: #5a5d5e;
+}
+
+
+/*ENALCES DEL MENU*/
+
+.menu li a,
+.cerrar-sesion li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/*EFECTO HOVER OPCIONES MENU*/
+
+.menu li a:hover {
+    background: rgba(195, 182, 11, 0.619);
+}
+
+
+/*ESTILOS CERRAR SESION*/
+
+.cerrar-sesion li a {
+    background: rgba(37, 35, 35, 0.7);
+    text-align: center;
+}
+
+.cerrar-sesion li a:hover {
+    background: rgb(255, 0, 0);
+}
+
+
+/* TEXTO BIENVENIDA */
+
+.bienvenida {
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+
+/* ESTILOS CREAR USUARIO */
+
+.contenedor_principal {
+    
+    margin-top: 2%;
+    width: 98%;
+    height: 98%;
+    background: rgba(200, 200, 200, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1%;
+}
+
+.contenedor_body {
+    overflow: overlay;
+    width: 98%;
+    height: 96%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    border-radius: 1%;
+}
+
+.contenedor_form {
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.iconos i {
+    font-size: 150px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ESTILO PARA LOS INPUST */
+
+.opciones {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+}
+
+
+/*BOTON PARA CREAR EL SUS */
+
+#crear {
+    background: #e6c166;
+    color: black;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#crear:hover {
+    background: #ffae00;
+}
+
+
+/* LISTA USUARIOS  ESTILOS DE LAS TABLAS*/
+
+table {
+    padding: 10px;
+    width: 100%;
+    max-width: 1050px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #767676;
+    padding: 8px;
+    text-align: left;
+    font-size: 12px;
+}
+
+th {
+    background-color: #626060;
+    color: white;
+}
+
+tr:hover {
+    background: rgba(195, 182, 11, 0.619);
+}
+
+
+/*ESTLOS INPUS DENTRO DE LA TABLA*/
+
+td input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* MOSTRAR LOS TEXTOS EN BLANCO */
+
+.texto_registros {
+    color: white;
+}

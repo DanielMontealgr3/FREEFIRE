@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.tarjetaAviso{
+   width: 100%;
+}
+.aviso{
+    width: clamp(320px, 50%, 20%);
+    height: 80px;
+    background-color: #eeb72b;
+    position: absolute;
+    z-index: 1000;
+    top: 5%;
+    left: -100%;
+
+}
+
+.animacion{
+    animation: salir 2s ease forwards;
+    left: 0%;
+}
+@keyframes salir {
+    from{
+        transform: translateX(-110%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+#error{
+   font-size: 20px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+   margin-left: 10%;
+   width: 80%;
+}

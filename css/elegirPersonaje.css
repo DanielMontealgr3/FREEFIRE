@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url(../assets/fondos/elegirPersonaje.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+}
+
+.tituloSeleccione{
+    width: 50%;
+    display: flex;
+    background-color: #eeb72b;
+}
+
+.imgPersonita{
+    width: 50px;
+    height: 50px;
+}
+
+.tittle{
+    color: white;
+}
+
+.logo{
+    width: 230px;
+    height: 50px;
+    /* margin-left: 100px; */
+}
+
+@media (width >= 320px) {
+    .tituloSeleccione{
+        margin-top: 2dvh;
+        width: 320px;
+        
+    }
+
+    .contenidoMain{
+        width: 100%;
+        height: auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .barraPersonajes{
+        background-color: rgb(17, 17, 17);
+        width: 200px;
+        height: auto;
+        padding: 10px 0 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .contenedorPersonjae{
+        margin-top: 10%;
+        width: 100px;
+        height: 130px;
+        border: 1px solid yellow;
+
+    }
+
+    .personajeImg{
+        width: 100px;
+        height: 323px;
+        object-fit: cover;
+        position: relative;
+        clip-path: inset(0 0 193px 0);
+    }
+
+    .seleccionarPersonaje{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .seleccionarBoton{
+        width: 150px;
+        height: 40px;
+        background-color: #eeb72b;
+        border-radius: 10px;
+        border: none;
+        text-decoration: none;
+        font-style: none;
+        text-decoration-style: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: larger;
+    }
+
+    .infoPersonaje{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info{
+        display: flex;
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nombrePersonaje{
+        color: white;
+        font-size: 30px;
+        font-weight: 800;
+        
+    }
+
+    #imagenPersonaje{
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 643px) {
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main{
+        display: flex;
+    }
+    .contenidoMain{
+        flex-direction: column;
+        width: clamp(30%, 40%, 50%);
+    }
+
+    .infoPersonaje{
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #nombrePersonaje{
+        color: white;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-weight: 800;
+        margin-top: clamp(5px, 2vw, 10px);
+    }
+    .barraPersonajes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding: clamp(10px, 2vw, 20px);
+    }
+
+    #imagenPersonaje{
+        width: clamp(200px, 20vw, 250px);
+        height: clamp(400px, 50vw, 523px);
+        position: relative;
+        object-fit: cover;
+        border-radius: unset;
+    }
+}
+
+@media (min-width: 1024px) {
+    .barraPersonajes{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        width: auto;
+        padding: clamp(10px, 2vw, 20px);
+    }
+
+    body{
+        overflow-y: hidden;
+    }
+
+    .contenedorPersonjae{
+        margin-top: clamp(5%, 5vw, 10%);
+        width: clamp(100px, 12vw, 151px);
+        height: clamp(130px, 17vw, 174px);
+        border: 1px solid yellow;
+    }
+
+    .personajeImg{
+        width: clamp(100px, 12vw, 150px);
+        height: clamp(300px, 37vw, 423px);
+        object-fit: cover;
+        position: relative;
+        clip-path: inset(0 0 clamp(150px, 22vw, 250px) 0);
+    }
+}
